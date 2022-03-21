@@ -1,4 +1,4 @@
-package br.inatel.cdg;
+package br.inatel.cdg.test;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

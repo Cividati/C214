@@ -1,4 +1,4 @@
-package br.inatel.cdg;
+package br.inatel.cdg.test;
 
 public interface InimigoService {
 
