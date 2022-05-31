@@ -1,3 +1,12 @@
+def convert(string):
+    print(string)
+    new_array = []
+    for i in string.split(','):
+        new_array.append(int(i))
+    print(new_array)
+    return new_array
+
+
 class Sorting:
 
     def bubbleSort(array):
