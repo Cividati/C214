@@ -9,13 +9,13 @@ def hello():
 
 @app.route("/bubblesort")
 def bubblesort():
-      array = request.args.get('array')
-  
-      new_array = algorithms.Sorting.bubbleSort(array.split(','))
+	arg_string = request.args.get('array')
+	converted_array = algorithms.convert(arg_string)
+	new_array = algorithms.Sorting().bubbleSort(converted_array)
+	response = f"Your array: {arg_string} <br>Bubble sort: {new_array}"
 
-      response = f"Your array: {array.split(',')} Bubble sort: {new_array}"
- 
-      return response
+	return response
+
 
 if __name__ == "__main__":
       app.run(debug=True ,port=80,use_reloader=True) 
