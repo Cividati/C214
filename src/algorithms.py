@@ -1,3 +1,5 @@
+from sorting_techniques import pysort
+
 def convert(string):
     print(string)
     new_array = []
@@ -6,20 +8,19 @@ def convert(string):
     print(new_array)
     return new_array
 
-
 class Sorting:
+    sortObj = pysort.Sorting()
+    def bubbleSort(self, array):
+        return self.sortObj.bubbleSort(array)
 
-    def bubbleSort(array):
-        for i in range(len(array)):
-            already_sorted = True
+    def insertionSort(self, array):
+        return self.sortObj.insertionSort(array)
 
-            for j in range(len(array) - i - 1):
-                if array[j] > array[j + 1]:
-                    array[j], array[j + 1] = array[j + 1], array[j]
+    def heapSort(self, array):
+        return self.sortObj.heapSort(array)
 
-                    already_sorted = False
+    def mergeSort(self, array):
+        return self.sortObj.mergeSort(array)
 
-            if already_sorted:
-                break
-
-        return array
+    def bogoSort(self, array):
+        return self.sortObj.bogoSort(array)
